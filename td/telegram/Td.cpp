@@ -4438,6 +4438,7 @@ Status Td::set_td_parameters(td_api::object_ptr<td_api::tdlibParameters> paramet
   parameters_.use_secret_chats = parameters->use_secret_chats_;
   parameters_.use_chat_info_db = parameters->use_chat_info_database_;
   parameters_.use_message_db = parameters->use_message_database_;
+  parameters_.disable_message_unload = parameters->disable_message_unload_;
 
   TRY_STATUS(fix_parameters(parameters_));
   TRY_RESULT(encryption_info, TdDb::check_encryption(parameters_));

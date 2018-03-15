@@ -10048,7 +10048,7 @@ void MessagesManager::dump_debug_message_op(const Dialog *d, int priority) {
 }
 
 bool MessagesManager::is_message_unload_enabled() const {
-  return G()->parameters().use_message_db || td_->auth_manager_->is_bot();
+  return (G()->parameters().use_message_db && !G()->parameters().disable_message_unload)  || td_->auth_manager_->is_bot();
 }
 
 bool MessagesManager::can_unload_message(const Dialog *d, const Message *m) const {

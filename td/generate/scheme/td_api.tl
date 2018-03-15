@@ -29,6 +29,7 @@ ok = Ok;
 //@use_file_database If set to true, information about downloaded and uploaded files will be saved between application restarts
 //@use_chat_info_database If set to true, the library will maintain a cache of users, basic groups, supergroups, channels and secret chats. Implies use_file_database
 //@use_message_database If set to true, the library will maintain a cache of chats and messages. Implies use_chat_info_database
+//@disable_message_unload If set to true, the library will not unload any messages.
 //@use_secret_chats If set to true, support for secret chats will be enabled
 //@api_id Application identifier for Telegram API access, which can be obtained at https://my.telegram.org
 //@api_hash Application identifier hash for Telegram API access, which can be obtained at https://my.telegram.org
@@ -38,7 +39,7 @@ ok = Ok;
 //@application_version Application version
 //@enable_storage_optimizer If set to true, old files will automatically be deleted
 //@ignore_file_names If set to true, original file names will be ignored. Otherwise, downloaded files will be saved under names as close as possible to the original name
-tdlibParameters use_test_dc:Bool database_directory:string files_directory:string use_file_database:Bool use_chat_info_database:Bool use_message_database:Bool use_secret_chats:Bool api_id:int32 api_hash:string system_language_code:string device_model:string system_version:string application_version:string enable_storage_optimizer:Bool ignore_file_names:Bool = TdlibParameters;
+tdlibParameters use_test_dc:Bool database_directory:string files_directory:string use_file_database:Bool use_chat_info_database:Bool use_message_database:Bool disable_message_unload:Bool use_secret_chats:Bool api_id:int32 api_hash:string system_language_code:string device_model:string system_version:string application_version:string enable_storage_optimizer:Bool ignore_file_names:Bool = TdlibParameters;
 
 
 //@class AuthenticationCodeType @description Provides information about the method by which an authentication code is delivered to the user

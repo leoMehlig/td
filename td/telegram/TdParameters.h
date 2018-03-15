@@ -23,6 +23,7 @@ struct TdParameters {
   bool use_secret_chats = false;
   bool use_chat_info_db = false;
   bool use_message_db = false;
+  bool disable_message_unload = false;
 };
 
 }  // namespace td
