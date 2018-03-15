@@ -224,6 +224,7 @@ class DoAuthentication : public Task {
         parameters->use_test_dc_ = true;
         parameters->database_directory_ = name_ + TD_DIR_SLASH;
         parameters->use_message_database_ = true;
+        parameters->disable_message_unload_ = false;
         parameters->use_secret_chats_ = true;
         parameters->api_id_ = 94575;
         parameters->api_hash_ = "a3406de8d171bb422bb6ddf3bbd800e2";

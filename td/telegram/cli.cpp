@@ -642,6 +642,7 @@ class CliClient final : public Actor {
     auto parameters = td_api::make_object<td_api::tdlibParameters>();
     parameters->use_test_dc_ = use_test_dc_;
     parameters->use_message_database_ = true;
+    parameters->disable_message_unload_ = false;
     parameters->use_secret_chats_ = true;
     parameters->api_id_ = api_id_;
     parameters->api_hash_ = api_hash_;
